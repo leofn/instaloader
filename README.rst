@@ -37,18 +37,15 @@
 
 **Instaloader**
 
-- downloads **public and private profiles, hashtags, user stories,
-  feeds and saved media**,
+- baixa **perfis públicos e privados, hashtags, histórias de usuários, feeds e mídias salvas**,
 
-- downloads **comments, geotags and captions** of each post,
+- baixa **comentários, geotags e legendas** de cada postagem,
 
-- automatically **detects profile name changes** and renames the target
-  directory accordingly,
+- detecta automaticamente **mudanças no nome do perfil** e renomeia o diretório de destino de acordo,
 
-- allows **fine-grained customization** of filters and where to store
-  downloaded media,
+- permite **personalização detalhada** de filtros e onde armazenar a mídia baixada,
 
-- automatically **resumes previously-interrupted** download iterations.
+- retoma automaticamente iterações de download **anteriormente interrompidas**.
 
 ::
 
@@ -60,53 +57,46 @@
 `Instaloader Documentation <https://instaloader.github.io/>`__
 
 
-How to Automatically Download Pictures from Instagram
+Como Baixar Automaticamente Fotos do Instagram
 -----------------------------------------------------
 
-To **download all pictures and videos of a profile**, as well as the
-**profile picture**, do
+
+Para **baixar todas as fotos e vídeos de um perfil**, bem como a **foto do perfil**, digite no prompt do seu computador o seguinte comando:
 
 ::
 
     instaloader profile [profile ...]
 
-where ``profile`` is the name of a profile you want to download. Instead
-of only one profile, you may also specify a list of profiles.
+Onde ``profile`` é o nome de um perfil que você deseja baixar. Em vez de apenas um perfil, você também pode especificar uma lista de perfis.
 
-To later **update your local copy** of that profiles, you may run
+Para mais tarde **atualizar sua cópia local** desses perfis, você pode executar:
+
 
 ::
 
     instaloader --fast-update profile [profile ...]
 
-If ``--fast-update`` is given, Instaloader stops when arriving at the
-first already-downloaded picture.
+Se ``--fast-update`` for fornecido, o Instaloader para ao chegar na primeira foto já baixada.
 
-Alternatively, you can use ``--latest-stamps`` to have Instaloader store
-the time each profile was last downloaded and only download newer media:
+Alternativamente, você pode usar ``--latest-stamps`` para que o Instaloader armazene o tempo de cada última vez que o perfil foi baixado e apenas baixe mídia mais recente:
 
 ::
 
     instaloader --latest-stamps -- profile [profile ...]
 
-With this option it's possible to move or delete downloaded media and still keep
-the archive updated.
+Com esta opção, é possível mover ou excluir mídia baixada e ainda manter o arquivo atualizado.
 
-When updating profiles, Instaloader
-automatically **detects profile name changes** and renames the target directory
-accordingly.
+Ao atualizar perfis, o Instaloader detecta automaticamente **mudanças no nome do perfil** e renomeia o diretório de destino de acordo.
 
-Instaloader can also be used to **download private profiles**. To do so,
-invoke it with
+O Instaloader também pode ser usado para **baixar perfis privados**. Para fazer isso, invoque-o com
+
 
 ::
 
     instaloader --login=your_username profile [profile ...]
 
-When logging in, Instaloader **stores the session cookies** in a file in your
-temporary directory, which will be reused later the next time ``--login``
-is given.  So you can download private profiles **non-interactively** when you
-already have a valid session cookie file.
+Ao fazer login, o Instaloader **armazena os cookies da sessão** em um arquivo em seu diretório temporário, que será reutilizado mais tarde na próxima vez que ``--login`` for fornecido. Assim, você pode baixar perfis privados **não interativamente** quando já tiver um arquivo de cookie de sessão válido.
+
 
 `Instaloader Documentation <https://instaloader.github.io/basic-usage.html>`__
 
